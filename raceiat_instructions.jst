@@ -1,0 +1,65 @@
+<%
+    var respInst = "將會用到鍵盤上的「E」鍵與「I」鍵";
+    if (global.$isTouch)  respInst = "要請你";
+%>
+
+<div class="panel panel-info" style="margin-top:1em">
+		<div class="panel-heading">
+			<h1 class="panel-title" style="font-size:1.5em">
+				內隱聯結測驗操作說明
+			</h1>
+		</div>
+</div>
+
+<div class="panel-body">
+	<p class="lead">在接下來的測驗中,<%=respInst%>將出現的詞彙或圖片進行分類。</br> 
+	以下是在接下來的測驗中會出現的詞彙及圖片，當中被分成四種類別：</p>
+
+	<table class="table table-bordered">
+		<tr class="active">
+			<th>類別</th>
+			<th>詞彙及圖片</th>
+		</tr>
+		<tr>
+			<th>好的</th>
+			<td><%=global.posWords[0]%>, <%=global.posWords[1]%>, <%=global.posWords[2]%>, 
+			<%=global.posWords[3]%>, <%=global.posWords[4]%>, <%=global.posWords[5]%>, 
+			<%=global.posWords[6]%>, <%=global.posWords[7]%></td>
+		</tr>
+		<tr>
+			<th>壞的</th>
+			<td><%=global.negWords[0]%>, <%=global.negWords[1]%>, <%=global.negWords[2]%>, 
+			<%=global.negWords[3]%>, <%=global.negWords[4]%>, <%=global.negWords[5]%>, 
+			<%=global.negWords[6]%>, <%=global.negWords[7]%></td>
+		</tr>
+		<tr>
+			<th><%=global.blackLabels%></th>
+	<td>
+		  <img src="<%=global.baseURL%>05_gay.jpg" height=60>
+		  <img src="<%=global.baseURL%>07_lesbian.jpg" height=60>
+		  <img src="<%=global.baseURL%>14_gay.jpg" height=60>
+		  <img src="<%=global.baseURL%>15_lesbian.jpg" height=60>  同性戀, 同性戀者, 同志
+
+	   
+			  </td>
+		</tr>
+		<tr>
+			<th><%=global.whiteLabels%></th>
+			<td>    
+			  <img src="<%=global.baseURL%>06_hetero.jpg" height=60>
+			  <img src="<%=global.baseURL%>13_hetero.jpg" height=60>  異性戀, 異性戀者
+
+			
+			  </td>
+		</tr>
+	</table>
+
+	<p class="lead">本測驗總共分為七個階段，每個階段的分類與執行規則皆會有所變動，請注意每個階段開始前的文字說明。<p>
+
+	<div class="text-center proceed" style="margin: 30px auto 10px;">
+		<button pi-message-done type="button" class="btn btn-primary">
+			開始
+		</button>
+	</div>
+</div>
+
