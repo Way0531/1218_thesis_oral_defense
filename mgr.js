@@ -151,7 +151,7 @@ define(['managerAPI',
 	//{inherit: 'demographic'},    
 	//{inherit: 'explicits'}, //固定順序
 
-	    /*
+	    
         {
             mixer:'random',
             data:[
@@ -165,7 +165,7 @@ define(['managerAPI',
                     ]
                 }
             ]
-        },*/
+        },
 	{inherit: 'suggestion'}, 
 	{inherit: 'uploading'},
 
